@@ -1,0 +1,158 @@
+
+<app-portalheader></app-portalheader>
+
+<div class="container p-5">
+    <mat-card class="card-layout">
+        <div>
+            <p class="title pb-5">Complete Screening Application</p>
+        </div>
+
+        <div>
+            <p class="sub-title pl-5 pb-3 text-muted">Carefully enter O-Level Subjects and corresponding Grades.</p>
+        </div>
+
+        <form class="form-layout">
+            <div class="d-flex justify-content-between pr-5 pb-2">
+                <p>Select Subject</p>
+                <p>Select Grade</p>
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="subject-width">
+                    <mat-label>Mathematics</mat-label>
+                    <input matInput disabled>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="grade-width">
+                    <mat-label>Grade</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let grade of gradeList;" value="">{{ grade }}</mat-option>
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="subject-width">
+                    <mat-label>English Language</mat-label>
+                    <input matInput disabled>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="grade-width">
+                    <mat-label>Grade</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let grade of gradeList;" value="">{{ grade }}</mat-option>                        
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="subject-width">
+                    <mat-label>Enter Subject</mat-label>
+                    <input matInput>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="grade-width">
+                    <mat-label>Grade</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let grade of gradeList;" value="">{{ grade }}</mat-option>                        
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="subject-width">
+                    <mat-label>Enter Subject</mat-label>
+                    <input matInput>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="grade-width">
+                    <mat-label>Grade</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let grade of gradeList;" value="">{{ grade }}</mat-option>                        
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="subject-width">
+                    <mat-label>Enter Subject</mat-label>
+                    <input matInput>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="grade-width">
+                    <mat-label>Grade</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let grade of gradeList;" value="">{{ grade }}</mat-option>                        
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="subject-width">
+                    <mat-label>Enter Subject</mat-label>
+                    <input matInput>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="grade-width">
+                    <mat-label>Grade</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let grade of gradeList;" value="">{{ grade }}</mat-option>                        
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="subject-width">
+                    <mat-label>Enter Subject</mat-label>
+                    <input matInput>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="grade-width">
+                    <mat-label>Grade</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let grade of gradeList;" value="">{{ grade }}</mat-option>                        
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="subject-width">
+                    <mat-label>Enter Subject</mat-label>
+                    <input matInput>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="grade-width">
+                    <mat-label>Grade</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let grade of gradeList;" value="">{{ grade }}</mat-option>                        
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="subject-width">
+                    <mat-label>Enter Subject</mat-label>
+                    <input matInput>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="grade-width">
+                    <mat-label>Grade</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let grade of gradeList;" value="">{{ grade }}</mat-option>                        
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+
+            
+            
+            <div class="d-flex justify-content-end py-4">
+                <button mat-raised-button class="btn-color" >Submit</button>
+            </div>
+        </form>
+
+
+    </mat-card>
+    
+</div>
+
+<app-portalfooter></app-portalfooter>

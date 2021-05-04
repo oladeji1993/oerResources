@@ -1,0 +1,39 @@
+
+
+.card-layout {
+    width: 70%;
+    margin: auto;
+    background-color: rgb(248, 248, 248);
+}
+
+.form-layout {
+    width: 90%;
+    margin: auto;
+}
+
+.stretch-input {
+    width: 100%;
+}
+
+.subject-width {
+    width: 55%;
+}
+
+.grade-width {
+    width: 35%;
+}
+
+.space-around {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: x-large;
+    color: #0F0D3E;
+}
+
+.btn-color {
+    background-color: #00356B;
+    color: #ffffff;
+}

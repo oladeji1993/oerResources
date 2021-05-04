@@ -1,0 +1,106 @@
+
+<app-portalheader></app-portalheader>
+
+<div class="container p-5">
+    <mat-card class="card-layout">
+        <div>
+            <p class="title pb-5">Continue Screening Application</p>
+        </div>        
+
+        <form class="form-layout" [formGroup]="form" (ngSubmit)="submitApplicationForm();">
+            <div>
+                <mat-form-field appearance="outline" class="stretch-input">
+                    <mat-label>UTME Registration Number</mat-label>
+                    <input matInput >
+                </mat-form-field> 
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline" class="stretch-input">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput type="text" formControlName="last_name">
+                    <div *ngIf="last_name?.touched && last_name?.invalid" class="alert alert-danger small">Last Name field is required!</div>
+                </mat-form-field>
+                <!-- <div *ngIf="form.get('last_name')?.touched && form.get('last_name')?.invalid" class="alert alert-danger">Last name is required!</div>  -->
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="half-width">
+                    <mat-label>First Name</mat-label>
+                    <input matInput type="text" formControlName="first_name" required>
+                    <div *ngIf="form.get('first_name')?.touched && form.get('first_name')?.invalid" class="alert alert-danger small">First Name field is rquired!</div>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="half-width">
+                    <mat-label>Middle Name</mat-label>
+                    <input matInput type="text" formControlName="mid_name">
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="half-width">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput type="text" formControlName="dob">
+                    <div *ngIf="form.get('dob')?.touched && form.get('dob')?.invalid" class="alert alert-danger small">Date of Birth field is required!</div>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="half-width">
+                    <mat-label>Country</mat-label>
+                    <input matInput formControlName="country">
+                    <div *ngIf="form.get('country')?.touched && form.get('country')?.invalid" class="alert alert-danger small">Country field is required!</div>
+                </mat-form-field> 
+            </div>
+
+            <div class="space-around">
+                <mat-form-field appearance="outline" class="half-width">
+                    <mat-label>State</mat-label>
+                    <input matInput type="text" formControlName="state">
+                    <div *ngIf="form.get('state')?.touched && form.get('state')?.invalid" class="alert alert-danger small">State field is required!</div>
+                </mat-form-field> 
+
+                <mat-form-field appearance="outline" class="half-width">
+                    <mat-label>City</mat-label>
+                    <input matInput type="text" formControlName="city">
+                    <div *ngIf="form.get('city')?.touched && form.get('city')?.invalid" class="alert alert-danger small">City field is required!</div>
+                </mat-form-field> 
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline" class="stretch-input">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" required>
+                    <div *ngIf="email?.touched && email?.invalid" class="alert alert-danger small">
+                        Email field is required!
+                        <!-- <div *ngIf="email?.errors.email">Email provided does not match email format!</div>  -->
+                    </div>
+                </mat-form-field> 
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline" class="stretch-input">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput type="tel" formControlName="phone" required>
+                    <div *ngIf="form.get('phone')?.touched && form.get('phone')?.invalid" class="alert alert-danger small">Phone field is required!</div>
+                </mat-form-field> 
+            </div>
+
+            <div>
+                <mat-form-field appearance="outline" class="stretch-input">
+                    <mat-label>Select Course</mat-label>
+                    <mat-select formControlName="course">
+                        <mat-option *ngFor="let item of courses" value="{{ item }}">{{ item }} </mat-option>
+                    </mat-select>
+                </mat-form-field> 
+            </div>
+            
+            <div class="d-flex justify-content-end py-4">
+                <button mat-raised-button class="btn-color py-2 px-4">Proceed</button>
+            </div>
+        </form>
+
+
+    </mat-card>
+    
+</div>
+
+<app-footerheader></app-footerheader>

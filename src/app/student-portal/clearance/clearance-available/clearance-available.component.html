@@ -1,0 +1,116 @@
+
+
+<app-layout></app-layout>
+
+<div class="container my-5 pb-5">
+    <div class="row">
+        <div class="col-md-3">
+            <app-portalsidenav></app-portalsidenav>
+        </div>
+
+        <div class="col-md-9">
+            <div class="card">
+
+                <form class="form-layout">
+                    <div class="d-flex justify-content-center pr-5 pb-2">
+                        <p class="pb-3 pt-5 title">Available Clearance</p>
+                    </div>
+
+                    <div class="d-flex justify-content-around mb-5">
+                        <div class="d-flex justify-content-between">
+                            <img src="./../../../../assets/images/portal/accept.png" height="40" alt="">
+                            <p class="px-2 text-wrap">Hostel <br> Clearance</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <img src="./../../../../assets/images/portal/cancel.png" height="40" alt="">
+                            <p class="px-2 text-wrap">Sport <br> Clearance</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <img src="./../../../../assets/images/portal/cancel.png" height="40" alt="">
+                            <p class="px-2 text-wrap">Library <br> Clearance</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <img src="./../../../../assets/images/portal/cancel.png" height="40" alt="">
+                            <p class="px-2 text-wrap">Medical <br> Clearance</p>
+                        </div>
+                    </div>
+        
+                    <div class="d-flex justify-content-around mb-5">        
+                        <div class="mx-3">
+                            <mat-card>
+                                <mat-card-header>
+                                    <mat-card-title class="title">Hostel Clearance</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p class="text-muted py-2">
+                                        Instruction : Upon registration and Login To begin your Library clearance, Provide your Library card and proceed to pay for clearance at the bank.
+                                    </p>
+                                </mat-card-content>
+                                <mat-card-actions class="text-center pb-3">
+                                    <button mat-button class="btn-color" (click)="hostelClearance();">Do Clearance</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+                        <div class="mx-3">
+                            <mat-card>
+                                <mat-card-header>
+                                    <mat-card-title class="title">Sport Clearance</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p class="text-muted py-2">
+                                        Instruction : Upon registration and Login To begin your Library clearance, Provide your Library card and proceed to pay for clearance at the bank.
+                                    </p>
+                                </mat-card-content>
+                                <mat-card-actions class="text-center pb-3">
+                                    <button mat-button class="btn-color" (click)="sportClearance();">Do Clearance</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-around mb-5">        
+                        <div class="mx-3">
+                            <mat-card>
+                                <mat-card-header>
+                                    <mat-card-title class="title">Library Clearance</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p class="text-muted py-2">
+                                        Instruction : Upon registration and Login To begin your Library clearance, Provide your Library card and proceed to pay for clearance at the bank.
+                                    </p>
+                                </mat-card-content>
+                                <mat-card-actions class="text-center pb-3">
+                                    <button mat-button class="btn-color" (click)="libraryClearance();">Do Clearance</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+                        <div class="mx-3">
+                            <mat-card>
+                                <mat-card-header>
+                                    <mat-card-title class="title">Medical Clearance</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    <p class="text-muted py-2">
+                                        Instruction : Upon registration and Login To begin your Library clearance, Provide your Library card and proceed to pay for clearance at the bank.
+                                    </p>
+                                </mat-card-content>
+                                <mat-card-actions class="text-center pb-3">
+                                    <button mat-button class="btn-color" (click)="medicalClearance();">Do Clearance</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+                    </div>
+        
+                </form>
+
+            </div>
+
+            <div class="text-center pt-5 text-blue">
+                <p>For any difficulty, Click Here or Call the Support Line at 08139833300</p>
+                <p>Maduka University</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-portalfooter></app-portalfooter>

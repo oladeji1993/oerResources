@@ -1,0 +1,41 @@
+
+<h3 mat-dialog-title class="sub-title text-center">Make Screening Fee Payment</h3>
+
+<mat-divider></mat-divider>
+
+<div mat-dialog-content>
+    <div class="row">
+        <p class="py-3 col-6 sub-title">Session: 2019/2020</p>
+        <p class="py-3 col-6">mail@mail.com</p>
+    </div>
+
+    <p class="text-right">Pay <span class="amount-color">NGN 1000</span></p>
+
+    <p class="text-center">Enter card Details</p>
+
+    <mat-form-field>
+        <mat-label>Enter Card Number</mat-label>
+        <!-- <input matInput [(ngModel)]="data.animal"> -->
+        <input matInput number appearance="outline" placeholder="0000 0000 0000 0000">
+    </mat-form-field>
+
+    <div>
+        <mat-form-field class="pr-2">
+            <mat-label>Expiry Date</mat-label>
+            <!-- <input matInput [(ngModel)]="data.animal"> -->
+            <input matInput number appearance="outline" placeholder="MM/YY">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>CVV</mat-label>
+            <!-- <input matInput [(ngModel)]="data.animal"> -->
+            <input matInput number appearance="outline" placeholder="123">
+        </mat-form-field> 
+    </div>    
+
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-raised-button class="btn-color" (click)="proceedToApplication();">Pay NGN 1000</button>
+    <!-- <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button> -->
+    <!-- <button mat-button mat-raised-button cdkFocusInitial>Ok</button> -->
+</div>

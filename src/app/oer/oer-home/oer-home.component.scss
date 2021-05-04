@@ -1,0 +1,140 @@
+.card-heading{
+    font-family: Mulish;
+font-style: normal;
+font-weight: 800;
+font-size: 22px;
+line-height: 28px;
+display: flex;
+align-items: center;
+
+color: #00356B;
+
+}
+
+.row{
+    .card-text{
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 25px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #00356B;
+        }
+}
+
+.welcome{
+    .card-title{
+        strong{
+            position: absolute;
+            left: 30%;
+            top: 20%;
+            font-family: Mulish;
+            font-style: normal;
+            font-weight: 800;
+            font-size: 60px;
+            line-height: 75px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+    
+            color: #FFFFFF;
+        }
+    
+    }
+    p{
+        position: absolute;
+        left: 27%;
+        top: 40%;
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #F5F5F5;
+    }
+}
+.jumbotron{
+    .abs-heading {
+        position: absolute;
+        z-index: 9999;
+        top: 0;
+        width: 93%;
+        background-color: #B5861E;
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 31px;
+        // display: flex;
+        align-items: center;
+        text-align: center;
+        
+
+        color: #FFFFFF;
+        
+
+    }
+}
+.journal-article{
+    background: #F2ECEC;
+    border-radius: 3px;
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    
+
+color: #00356B;
+}
+.list-group-item{
+    span{
+        font-family: Mulish;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        // display: flex;
+        align-items: center;
+
+        color: #7A7A7A;
+        text-decoration: none;
+    }
+}
+
+.faculty{
+    font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 20px;
+display: flex;
+align-items: center;
+
+color: #00356B;
+margin-bottom:20px;
+}
+
+.news-heading{
+    font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 31px;
+// display: flex;
+align-items: center;
+text-align: center;
+
+color: #00356B;
+background: #F2ECEC;
+}

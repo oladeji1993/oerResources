@@ -1,0 +1,34 @@
+
+<app-portalheader></app-portalheader>
+
+<div class="container p-5">
+    <p class="text-center title">Maduka University Screening</p>
+</div>
+
+<div class="container pb-5">    
+    <mat-card>
+        <mat-grid-list cols="2" rowHeight="350px" >  
+            <mat-grid-tile>
+                Maduka University           
+            </mat-grid-tile>
+
+            <mat-divider [vertical]="true"></mat-divider>
+
+            <mat-grid-tile> 
+                <form [formGroup]="form" class="" (ngSubmit)="openPaymentProcess()">
+                    <p class="text-center mb-3 py-4 title" >Apply for Screening</p>
+                    <mat-form-field appearance="outline" class="stretch-input">
+                        <mat-label>Enter UTME Registration Number</mat-label>
+                        <input matInput formControlName="reg_no">
+                    </mat-form-field> 
+
+                    <button mat-raised-button [disabled]="!form.valid" class="full-width my-3 py-2 btn-color">Submit</button>
+
+                    <p class="py-4 text-color">Applied before? <a routerLink="application-login"><span class="click-here">Click here </span></a>to login</p>
+                </form>
+            </mat-grid-tile>
+        </mat-grid-list>   
+    </mat-card>    
+</div>
+
+<app-portalfooter></app-portalfooter>

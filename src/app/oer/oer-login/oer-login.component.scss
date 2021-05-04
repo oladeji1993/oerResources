@@ -1,0 +1,49 @@
+// mdb-card{
+    // border-radius: 15px;
+
+    // mdb-card-header{
+    //     border-radius: 15px 15px 0px 0px;
+    //     background-color: #00356b;
+    //     strong{
+    //         font-size: 28px;
+    //     }
+    // }
+    .custom-submit{
+        background-color:#B5861E;
+
+        border-radius: 50px;
+        color: #ffffff;
+        max-width: 100%;
+    }
+// }
+.login-welcome{
+    font-family: Mulish;
+font-style: normal;
+font-weight: 600;
+font-size: 25px;
+line-height: 31px;
+display: flex;
+align-items: center;
+text-align: center;
+}
+.login-title{
+    font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 38px;
+display: flex;
+align-items: center;
+
+color: #00356B;
+
+}
+.md-form{
+    label{
+        color: #ffffff;
+    }
+    input{
+        color: #ffffff;
+    }
+}
+

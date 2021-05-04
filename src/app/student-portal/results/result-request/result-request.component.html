@@ -1,0 +1,59 @@
+
+<app-layout></app-layout>
+
+<div class="container my-5 pb-5">
+    <div class="row">
+        <div class="col-md-3">
+            <app-portalsidenav></app-portalsidenav>
+        </div>
+
+        <div class="col-md-9">
+            <div class="card">
+
+                <form class="form-layout">
+                    <div class="d-flex justify-content-center pr-5 pb-2">
+                        <p class="title pb-3 pt-5">Check your Result</p>
+                    </div>
+        
+                    <!-- <div class="space-around">        
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Level</mat-label>
+                            <mat-select>
+                                <mat-option *ngFor="let level of levels;" value="">{{ level }}</mat-option>
+                            </mat-select>
+                        </mat-form-field> 
+                    </div> -->
+        
+                    <div class="space-around">        
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Semester</mat-label>
+                            <mat-select>
+                                <mat-option *ngFor="let semester of semesters;" value="">{{ semester }}</mat-option>                        
+                            </mat-select>
+                        </mat-form-field> 
+                    </div>
+        
+                    <div class="space-around">
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Session</mat-label>
+                            <mat-select>
+                                <mat-option *ngFor="let session of sessions;" value="">{{ session }}</mat-option>                        
+                            </mat-select>
+                        </mat-form-field> 
+                    </div>
+        
+                    <div class="p-4 d-flex justify-content-end">
+                        <button mat-raised-button color="primary" class="py-2 px-4" (click)="getResults();" >Check Result</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-portalfooter></app-portalfooter>
+    
+        
+                    
+                

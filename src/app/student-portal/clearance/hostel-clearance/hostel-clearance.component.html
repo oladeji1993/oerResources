@@ -1,0 +1,59 @@
+
+
+<app-layout></app-layout>
+
+<div class="container my-5 pb-5">
+    <div class="row">
+        <div class="col-md-3">
+            <app-portalsidenav></app-portalsidenav>
+        </div>
+
+        <div class="col-md-9">
+            <div class="card">
+
+                <form class="form-layout" enctype="multipart/form-data">
+                    <div class="d-flex justify-content-center pr-5 pb-2">
+                        <p class="title pb-3 pt-5">Hostel Clearance</p>
+                    </div>
+        
+                    <div class="space-around mb-4">        
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Receipt Number</mat-label>
+                            <input matInput>
+                        </mat-form-field> 
+                    </div>
+        
+                    <div class="space-around mb-5">        
+                        <div class="full-width">
+                            <label class="upload-label d-block">Upload Receipt</label>
+                            <input type="file" accept="image/*" class="file-input" id="file">
+                        </div> 
+                    </div>
+        
+                    <div class="py-4">
+                        <button mat-raised-button color="primary" class="full-width py-2 btn-color" >Submit</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-portalfooter></app-portalfooter>
+
+
+<script>
+    const file = document.querySelector('#file');
+    file.addEventListener('change', (e) => {
+    // Get the selected file
+    const [file] = e.target.files;
+    // Get the file name and size
+    const { name: fileName, size } = file;
+    // Convert size in bytes to kilo bytes
+    const fileSize = (size / 1000).toFixed(2);
+    // Set the text content
+    const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+    document.querySelector('.file-name').textContent = fileNameAndSize;
+    });
+</script>

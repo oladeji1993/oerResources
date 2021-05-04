@@ -1,0 +1,126 @@
+<ul class="nav justify-content-end white lighten-4 py-4 top-nav mr-5">
+    <li class="nav-item">
+        <a class="nav-link active" [routerLink]="[ '/portal']">E-Portal</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/transcript']">E-Learning</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/transcript']">Apply Online</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" [routerLink]="[ '/oer']">OER</a>
+    </li>
+    <li class="nav-item mt-0">
+        <button class="collapse-search" type="button" (click)="test.toggle()" mdbWavesEffect>
+            <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon>   Search
+          </button>
+    </li>
+    
+    <li class="nav-item dropdown btn-group ">
+        <select class="more-info minimal">
+            <option selected class="">info for... </option>
+            
+            <option value="">Student</option>
+            
+            <option value="">Faculty</option>
+            
+            <option value="">Staff</option>
+            <option value="">Alumni</option>
+          </select>
+    </li>
+    <li class="nav-item">
+        <button class="more-info-button" type="button" mdbWavesEffect>
+            go
+          </button>
+    </li>
+</ul>
+
+ <div>
+   
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light white sticky-top" [containerInside]="false">
+        <mdb-navbar-brand class="mr-5">
+            <a class="navbar-brand" [routerLink]="[ '/']">
+             <img src="assets/images/logo/mu-logo.png" height="60" class="d-inline-block" alt="">
+               <span style="font-family: 'Times New Roman', Times, serif; font-size: 24px; font-weight: bold; color: #00356b; "> Maduka University</span>
+            </a>
+        </mdb-navbar-brand>
+       
+        <links class="ml-5">
+            <ul class="navbar-nav ml-auto mr-5">
+                <li class="nav-item dropdown btn-group" dropdown>
+                    <a dropdownToggle type="button" class="secondary-menu" mdbWavesEffect>
+                    About Us</a>
+                    <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                        <a [routerLink]="[ 'history']" class="nav-link waves-light" mdbWavesEffect>History</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '/mission']" class="nav-link waves-light" mdbWavesEffect>Mission</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '/vision']" class="nav-link waves-light" mdbWavesEffect>Vision</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '/core-value']" class="nav-link waves-light" mdbWavesEffect>Core-Values</a>
+                        <div class="divider dropdown-divider"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown btn-group" dropdown>
+                    <a  dropdownToggle type="button" class="secondary-menu" mdbWavesEffect>
+                    Admission</a>
+                    <!-- <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                        <a [routerLink]="[ '/dashboard']" class="nav-link waves-light" mdbWavesEffect>Transcript Request</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '/dashboard']" class="nav-link waves-light" mdbWavesEffect>Transcript Request</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '/dashboard']" class="nav-link waves-light" mdbWavesEffect>Transcript Request</a>
+                        <div class="divider dropdown-divider"></div>
+                    </div> -->
+                </li>
+                <li class="nav-item dropdown btn-group" dropdown>
+                    <a  dropdownToggle type="button" class="secondary-menu" mdbWavesEffect>
+                    Academic Programmes</a>
+                    <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                        <a [routerLink]="[ '/undergraduate']" class="nav-link waves-light" mdbWavesEffect>undergraduate</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '/postgraduate']" class="nav-link waves-light" mdbWavesEffect>postgraduate</a>
+                        <div class="divider dropdown-divider"></div>
+                        
+                    </div>
+                </li>
+                <li class="nav-item dropdown btn-group" dropdown>
+                    <a dropdownToggle type="button" class="secondary-menu" mdbWavesEffect>
+                    Administration</a>
+                    <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                        <a [routerLink]="[ '/administration']" class="nav-link waves-light" mdbWavesEffect>The chancellor</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '/administration']" class="nav-link waves-light" mdbWavesEffect>The Pro-Chancellor</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '/administration']" class="nav-link waves-light" mdbWavesEffect>Transcript Request</a>
+                        <div class="divider dropdown-divider"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown btn-group" dropdown>
+                    <a class="secondary-menu" dropdownToggle type="button" mdbWavesEffect>
+                    Resources</a>
+                    <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                        <a [routerLink]="[ 'transcript']" class="nav-link waves-light" mdbWavesEffect>E-Transcript</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '#']" class="nav-link waves-light" mdbWavesEffect>E- Reciept Clearance</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '#']" class="nav-link waves-light" mdbWavesEffect>Hostel Allocation Portal</a>
+                        <div class="divider dropdown-divider"></div>
+                        <a [routerLink]="[ '#']" class="nav-link waves-light" mdbWavesEffect>Electronic Document Management System</a>
+                        <div class="divider dropdown-divider"></div>
+                    </div>
+                </li>
+            </ul>
+        </links>
+        
+    </mdb-navbar>
+    <div class="ml-5" mdbCollapse #test="bs-collapse">
+       <!-- Search form -->
+<form class="form-inline md-form form-sm active-cyan-2">
+    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search"
+      mdbInput>
+    <mdb-icon fas icon="search" aria-hidden="true"></mdb-icon>
+  </form>
+      </div>
+ </div>

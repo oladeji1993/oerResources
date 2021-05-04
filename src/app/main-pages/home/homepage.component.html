@@ -1,0 +1,488 @@
+<style>
+    .over-lap{
+        background: url("/assets/images/philosophy.jpg" );
+        
+        background-position: center;
+        zoom: 100%;
+        background-size: contain;
+        /* opacity: 0.5; */
+    }
+    .roll-over{
+        background: url("/assets/images/philosophy.jpg" );
+        
+        background-position: center;
+        zoom: 100%;
+        background-size: contain;
+        /* opacity: 0.5; */
+    }
+
+    /* .right-over-lap{
+      background-image: url('assets/images/rol-image.jpg');
+      background-position: center;
+        zoom: 100%; */
+        /* background-size: contain; */
+        /* opacity: 0.5; */
+        /* background-repeat: no-repeat; */
+      
+    /* } */
+
+    /* .third-section{
+      background-image: url('assets/images/slides/slide1.jpeg');
+      background-position: center;
+        zoom: 100%; */
+        /* background-size: contain; */
+        /* opacity: 0.5; */
+        /* background-repeat: no-repeat;
+        
+    } */
+</style>
+  <div class="row mb-5">
+      <div class="insight-divider"></div>
+      <div class="hero-image">
+        <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+            <mdb-carousel-item>
+              <div class="feature-archive">
+                <p> the feature archive <i class="fa fa-caret-right"></i></p>
+             </div>
+                            <img class="d-block w-100" src="assets/images/slides/slide1.jpeg" alt="First slide">
+            </mdb-carousel-item>
+            <!-- <mdb-carousel-item>
+              <img class="d-block w-100" src="assets/images/slides/slide2.jpeg" alt="Second slide">
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+              <img class="d-block w-100" src="assets/images/slides/slide3.jpeg" alt="Third slide">
+            </mdb-carousel-item> -->
+            
+          </mdb-carousel>
+        
+      </div>
+      <div class="insight">
+          <div class="insight-title mt-5">
+              <p class="text_divide">insight</p>
+          </div>
+          <div class="insight-body">
+           <h1>
+            DISCOVER MADUKA UNIVERSITY
+           </h1>
+           <p> Maduka University delivers quality education by having experienced  staff, superb teaching equipment’s and learning facilities,  external examiners, and first-rate buildings to guarantee standards. We use and deploy cutting edge technology to meet the global standard needs of students and lecturers thereby making education a great experience at Maduka Uiversity!
+            .</p>
+          </div>
+         <div class="row">
+            <div class="story-collection">
+             <p> Story collection <i class="fa fa-caret-right"></i></p>
+          </div>
+          <div class="m-feature-archive">
+            <p> the feature archive <i class="fa fa-caret-right"></i></p>
+         </div>
+         </div>
+      </div>
+  </div>
+  <!--Section: Features v.1-->
+<section class="text-center">
+
+    <ng-template #prev>
+        <i class="fa fa-angle-double-left"></i>
+      </ng-template>
+      <ng-template #next>
+        <i class="fa fa-angle-double-right"></i>
+      </ng-template>
+      <ng-template #item let-item let-i="index">
+  
+          <div class="items">
+            <img src="{{ item.name }}">
+          </div>
+  
+      </ng-template>
+  
+  
+  </section>
+  <!--Section: Features v.1-->
+
+  <!--Section: Features v.3-->
+<section>
+
+    
+  
+    <!--Grid row-->
+    <div class="row pt-2 mb-5">
+  
+      <!--Grid column-->
+      <div class="col-lg-6 text-center text-lg-left">
+        <h2 class="h1 text-left news-heading">The latest from Maduka university news</h2>
+        <img src="assets/images/pixel.jpg" alt="" class="img-fluid z-depth-0">
+        <h5 class="text-left mb-3 mt-3 news-headline">College amid the pandemic: advice for students to cope</h5>
+              <p class="text_divide text-left news-date">November 16, 2020</p>
+      </div>
+      <!--Grid column-->
+  
+      <!--Grid column-->
+      <div class="col-lg-6">
+        <div class="row my-3">
+          <p class="explore-more-text text-center">EXPLORE MORE NEWS</p>
+        <form>
+          <select class="explore-more-option minimal">
+              <option selected class="">Campus & Community </option>
+              
+              <option value="">Art and Humanities</option>
+              
+              <option value="">Business</option>
+              
+              <option value="">Alumni</option>
+              <option value="">Environments</option>
+            </select>
+      
+      
+          <button class="explore-more-button" type="button" mdbWavesEffect>
+              go
+            </button>
+          </form>
+        </div>
+        <!--Grid row-->
+        <div class="row pb-3">
+          <div class="col-2 col-md-1">
+            
+          </div>
+          <div class="col-10 mb-2">
+            <h5 class="news text-left mb-3 dark-grey-text">Latest News from Maduka University</h5>
+            <p class="text_divide text-left news-date">November 16, 2020</p>
+          </div>
+        </div>
+        <!--Grid row-->
+  
+         <!--Grid row-->
+         <div class="row pb-3">
+            <div class="col-2 col-md-1">
+              
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="news text-left mb-3 dark-grey-text">Latest News from Maduka University</h5>
+              <p class="text_divide text-left news-date">November 16, 2020</p>
+            </div>
+          </div>
+          <!--Grid row-->
+  
+         <!--Grid row-->
+         <div class="row pb-3">
+            <div class="col-2 col-md-1">
+              
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="news text-left mb-3 dark-grey-text">Latest News from Maduka University</h5>
+              <p class="text_divide text-left news-date">November 16, 2020</p>
+            </div>
+          </div>
+
+          <div class="row pb-3">
+            <div class="col-2 col-md-1">
+              
+            </div>
+            <div class="col-10 mb-2">
+              <h5 class="news text-left mb-3 dark-grey-text">Latest News from Maduka University</h5>
+              <p class="text_divide text-left news-date">November 16, 2020</p>
+            </div>
+          </div>
+          <!--Grid row-->
+  
+      </div>
+      <!--Grid column-->
+  
+    </div>
+    <!--Grid row-->
+  
+  </section>
+
+  <section>
+   <div class="explorer-header">
+    <div class="gallery-headings">
+      <h2>THE PARTS THAT MAKE MADUKA UNIVERSTY WHOLE</h2>
+      <h3>
+        A closer look for the curious
+      </h3>
+    </div>
+   </div>
+    <div class="gallery-explorer">
+      <div class="right-over-lap"> 
+        <img src="assets/images/rol-image.jpg" alt="placeholder">
+        <div style="position:absolute; top:10%; left:55%;">
+          <p class="text_divide mb-4" style="font-size: 16px; font-weight: bold; text-shadow: 15px 15px 40px #222222; color: #ffffff; text-transform: uppercase; font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Collections</p>
+          <p class="mb-4 mr-5" style="font-size: 17px; text-shadow: 15px 15px 40px #222222; color: #ffffff; font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Maduka University delivers quality education by having experienced  staff, superb teaching equipment’s and learning facilities,  external examiners, and first-rate buildings to guarantee standards. We use and deploy cutting edge technology to meet the global standard needs of students and lecturers thereby making education a great experience at Maduka Uiversity!
+      
+          </p>
+          <p class="mr-5 third-section-button" style=" width:fit-content; border: 1px solid #ffffff; padding: 16px 20px; font-size: 16px; font-weight: bold; text-shadow: 15px 15px 40px #222222; color: #ffffff; text-transform: uppercase; font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Explore the Collections <mdb-icon fas icon="caret-right" aria-hidden="true"></mdb-icon></p>
+    
+        </div>
+      </div>
+
+      <div class="left-over-lap">
+        <div class="row">
+          <div class="group-explore first-section">
+          <div class="row">
+            <div class="single-explore first-single">
+              <div class="row">
+               
+              <form>
+                <select class="single-explore-option single-minimal">
+                    <option selected class="">Experience</option>
+                    
+                    <option value="">Academics</option>
+                    
+                    <option value="">Discovery</option>
+                    
+                    <option value="">Collections</option>
+                    <option value="">Places</option>
+                  </select>
+            
+            
+                </form>
+              </div>
+              <div class="or-column row">
+                <p><mdb-icon fas icon="window-minimize" aria-hidden="true"></mdb-icon> or <mdb-icon fas icon="window-minimize" aria-hidden="true"></mdb-icon></p>
+              </div>
+              <div class="shuffle-button row">
+                <mdb-icon fas icon="redo" aria-hidden="true"></mdb-icon> <p class="pl-2">shuffle</p>
+              </div>
+            </div>  
+            <div class="single-explore second-single grid">
+              <figure class="effect-sadie">
+                <img src="assets/images/pixel.jpg" alt="placeholder">
+                <figcaption>
+                  <div>
+                    <h2>Collection from Maduka university</h2>
+                    <h2 style="position: absolute; top: 60%; left: 0; margin-top: 70px;  font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-transform: uppercase; font-size: 14px; font-weight: bold; letter-spacing: 2px;">learn more</h2>
+                    <p></p>
+                  </div>
+                  <a href="#">View more</a>
+                </figcaption>			
+              </figure>
+            </div>  
+            <div class="single-explore third-single grid">
+              <figure class="effect-sadie">
+                <img src="assets/images/00356B.jpg" alt="placeholder">
+                <figcaption>
+                  <div>
+                    <h2>Collection from Maduka university</h2>
+                    <h2 style="position: absolute; top: 60%; left: 0; margin-top: 70px;  font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-transform: uppercase; font-size: 14px; font-weight: bold; letter-spacing: 2px; color: #286dc0;">Explore the collection</h2>
+                    <p></p>
+                  </div>
+                  <a href="#">View more</a>
+                </figcaption>			
+              </figure>
+            </div>  
+            <div class="single-explore fourth-single grid">
+              <figure class="effect-sadie">
+                <img src="assets/images/philosophy.jpg" alt="placeholder">
+                <figcaption>
+                  <div>
+                    <h2>Collection from Maduka university</h2>
+                    <h2 style="position: absolute; top: 60%; left: 0; margin-top: 70px;  font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-transform: uppercase; font-size: 14px; font-weight: bold; letter-spacing: 2px;">Explore the collection</h2>
+                    <p></p>
+                    
+                  </div>
+                  <a href="#">View more</a>
+                </figcaption>			
+              </figure>
+            </div> 
+          </div>  
+          </div>
+          <div class="group-explore second-section" >
+           
+        </div>
+        <div class="group-explore third-section">
+         
+          <div class="third-section-content" style="position: relative;">
+            <img src="assets/images/third-section.jpg" alt="placeholder">
+            <div style="position:absolute; top:20%; left:10%;">
+              <p class="text_divide mb-4" style="font-size: 16px; font-weight: bold; text-shadow: 15px 15px 40px #222222; color: #ffffff; text-transform: uppercase; font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Collections</p>
+              <p class="mb-4 mr-5" style="font-size: 17px; text-shadow: 15px 15px 40px #222222; color: #ffffff; font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                Maduka University delivers quality education by having experienced  staff, superb teaching equipment’s and learning facilities,  external examiners, and first-rate buildings to guarantee standards. We use and deploy cutting edge technology to meet the global standard needs of students and lecturers thereby making education a great experience at Maduka Uiversity!
+          
+              </p>
+              <p class="mr-5 third-section-button" style=" width:fit-content; border: 1px solid #ffffff; padding: 16px 20px; font-size: 16px; font-weight: bold; text-shadow: 15px 15px 40px #222222; color: #ffffff; text-transform: uppercase; font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Explore the Collections <mdb-icon fas icon="caret-right" aria-hidden="true"></mdb-icon></p>
+        
+            </div>
+          </div>
+      </div>
+      <div class="group-explore fourth-section">
+        <div class="row">
+          <div class="single-explore fifth-single grid">
+            <figure class="effect-sadie">
+              <img src="assets/images/philosophy.jpg" alt="placeholder">
+              <figcaption>
+                <div>
+                  <h2>Collection from Maduka university</h2>
+                  <h2 style="position: absolute; top: 60%; left: 0; margin-top: 70px;  font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-transform: uppercase; font-size: 14px; font-weight: bold; letter-spacing: 2px;">Explore the collection</h2>
+                  <p></p>
+                </div>
+                <a href="#">View more</a>
+              </figcaption>			
+            </figure>
+          </div>  
+          <div class="single-explore sixth-single grid">
+            <figure class="effect-sadie">
+              <img src="assets/images/pixel.jpg" alt="placeholder">
+              <figcaption>
+                <div>
+                  <h2>Collection from Maduka university</h2>
+                  <h2 style="position: absolute; top: 60%; left: 0; margin-top: 70px;  font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-transform: uppercase; font-size: 14px; font-weight: bold; letter-spacing: 2px;">Explore the collection</h2>
+                  <p></p>
+                </div>
+                <a href="#">View more</a>
+              </figcaption>			
+            </figure>
+          </div>  
+          <div class="single-explore seventh-single grid">
+            <figure class="effect-sadie">
+              <img src="assets/images/00356B.jpg" alt="placeholder">
+              <figcaption>
+                <div>
+                  <h2>Collection from Maduka university</h2>
+                  <h2 style="position: absolute; top: 60%; left: 0; margin-top: 70px;  font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-transform: uppercase; font-size: 14px; font-weight: bold; letter-spacing: 2px; color: #286dc0;">learn more</h2>
+                  <p></p>
+                </div>
+                <a href="#">View more</a>
+              </figcaption>			
+            </figure>
+          </div>  
+          <div class="single-explore eighth-single grid">
+            <figure class="effect-sadie">
+              <img src="assets/images/philosophy.jpg" alt="placeholder">
+              <figcaption>
+                <div>
+                  <h2>Collection from Maduka university</h2>
+                  <h2 style="position: absolute; top: 60%; left: 0; margin-top: 70px;  font-family: Mallory-Medium,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-transform: uppercase; font-size: 14px; font-weight: bold; letter-spacing: 2px; color: #286dc0;">Explore the collection</h2>
+                  <p></p>
+                </div>
+                <a href="#">View more</a>
+              </figcaption>			
+            </figure>
+          </div> 
+        </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </section>
+  <!-- Section: Features v.3-->
+
+  <!-- <section class="text-center">
+      <div class="row collection-header">
+          <div class="col-md-12"><p>THE PARTS THAT MAKE MADUKA UNIVERSTY WHOLE</p></div>
+          <div class="col-md-12"><h1 style="display: block;">A closer look for the curious</h1></div>
+      </div>
+
+     <div class="row story-explore">
+        <div class="row collections">
+
+            <div class="row col-md-6">
+                <div class="col-md-6 col-sm-4 explore_story first" style="background-color: #286dc0;">
+                   
+                </div>
+                <div class="col-md-6  col-sm-4 explore_story"> 
+                    <div class="view zoom">
+                    <img src="assets/images/pixel.jpg" alt="placeholder">
+                    
+                    <div class="mask flex-center waves-effect waves-light rgba-teal-light text-wrap">
+                      <p class="white-text mr-5 ml-5 text-left">Latest Collections from Maduka University</p>
+                      <a [routerLink]="[ '#']" class="learn-more">learn more</a>
+                    </div>
+                    
+                  </div>
+                 
+                </div>
+                <div class="col-md-6  col-sm-4 explore_story" style="height: 235px;"> 
+                    <div class="">
+                    
+                    
+                    <div class="flex-center waves-effect waves-light text-wrap">
+                      <p class=" white-text mr-5 ml-5  mt-5 text-left">Latest Collections from Maduka University</p>
+                   
+                    </div>
+                    <a [routerLink]="[ '#']" class="learn-more">learn more</a>
+                  </div>
+                </div>
+                <div class="col-md-6  col-sm-4 explore_story" style="background-color: #bd5319;"> 
+                    <div class="">
+                    
+                    
+                    <div class="flex-center waves-effect waves-light text-wrap">
+                      <p class=" white-text mr-5 ml-5  mt-5 text-left">Latest Collections from Maduka University</p>
+                   
+                    </div>
+                    <a [routerLink]="[ '#']" class="learn-more">Explore the collection</a>
+                  </div>
+                </div>
+            </div>
+            <div  class="row col-md-6 over-lap ml-3">
+                <div class="over-lap-content">
+                    dkfghdfkj
+                </div>  
+               
+            </div>
+            <div class="row col-md-6 col-sm-12 roll-over">
+                <div class="roll-over-content">
+                    
+                        <p class="text_divide">Places</p>
+                    
+                    <p>Latest Collections from Maduka University</p>
+                </div>      
+            </div>
+
+            <div class="row col-md-6">
+                <div class="col-md-6  col-sm-4 explore_story"> 
+                    <div class="view zoom">
+                    <img src="assets/images/pixel.jpg" alt="placeholder">
+                    
+                    <div class="mask flex-center waves-effect waves-light rgba-teal-strong text-wrap">
+                      <p class="white-text mr-5 ml-5 text-left">Latest Collections from Maduka University</p>
+                      <a [routerLink]="[ '#']" class="learn-more">Explore the school</a>
+                    </div>
+                    
+                  </div>
+                 
+                </div>
+                <div class="col-md-6  col-sm-4 explore_story"> 
+                    <div class="view zoom">
+                    <img src="assets/images/grad.jpg" alt="placeholder">
+                    
+                    <div class="mask flex-center waves-effect waves-light rgba-teal-light text-wrap">
+                      <p class="white-text mr-5 ml-5 text-left">Latest Collections from Maduka University</p>
+                      <a [routerLink]="[ '#']" class="learn-more">Explore the school</a>
+                    </div>
+                    
+                  </div>
+                 
+                </div>
+                <div class="col-md-6  col-sm-4 explore_story" style="height: 235px;"> 
+                    <div class="">
+                    
+                    
+                    <div class="flex-center waves-effect waves-light text-wrap">
+                      <p class=" white-text mr-5 ml-5  mt-5 text-left">Latest Collections from Maduka University</p>
+                   
+                    </div>
+                    <a [routerLink]="[ '#']" class="learn-more">learn more</a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-sm-4 explore_story last"> 
+
+                     <div class="view zoom">
+                    <img src="assets/images/philosophy.jpg" alt="placeholder">
+                    
+                    <div class="mask flex-center waves-effect waves-light rgba-teal-light text-wrap">
+                      <p class="white-text mr-5 ml-5 text-left">Latest Collections from Maduka University</p>
+                      <a [routerLink]="[ '#']" class="learn-more">Explore the college</a>
+                    </div>
+                    
+                  </div>
+                 
+                </div>
+            </div>
+          </div>
+            
+      </div>
+                 
+  
+  
+  </section> -->
