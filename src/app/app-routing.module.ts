@@ -13,6 +13,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { OerRegisterComponent } from './oer/oer-register/oer-register.component';
+import { DashboardComponent } from './oer/dashboard/dashboard.component';
 
 const routes: Routes = [
   
@@ -60,6 +61,10 @@ const routes: Routes = [
     {
       path: 'login',
       component: OerLoginComponent
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent,  canActivate: [AuthGuard]
     },
 
   ]

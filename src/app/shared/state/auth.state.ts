@@ -37,30 +37,30 @@ import {tap} from 'rxjs/operators';
         private authService: AuthService,
         private _router: Router) {}
   
-    @Action(Login)
-    login(ctx: StateContext<AuthStateModel>, action: Login) {
-      return this.authService.UserLogin (action.payload).pipe(
-        tap((result: { token: string }) => {
-          ctx.patchState({
-            token: result.token,
-            username: action.payload.email
-            // username: action.payload.email
-          });
-        })
-      );
-    }
+    // @Action(Login)
+    // login(ctx: StateContext<AuthStateModel>, action: Login) {
+    //   return this.authService.UserLogin (action.payload).pipe(
+    //     tap((result: { token: string }) => {
+    //       ctx.patchState({
+    //         token: result.token,
+    //         username: action.payload.email
+    //         // username: action.payload.email
+    //       });
+    //     })
+    //   );
+    // }
   
-    @Action(Logout)
-    logout({ setState, getState }: StateContext<AuthStateModel>) {
-        this._router.navigate(['/transcript']);
-    const { token } = getState();
-    return this.authService.LogOut().pipe(
-      tap(_ => {
-        setState({
-            token: null,
-          username: null
-        });
-      })
-    );
-  }
+  //   @Action(Logout)
+  //   logout({ setState, getState }: StateContext<AuthStateModel>) {
+  //       this._router.navigate(['/transcript']);
+  //   const { token } = getState();
+  //   return this.authService.LogOut().pipe(
+  //     tap(_ => {
+  //       setState({
+  //           token: null,
+  //         username: null
+  //       });
+  //     })
+  //   );
+  // }
   }

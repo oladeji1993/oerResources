@@ -27,13 +27,13 @@
     <mdb-card-body class="px-lg-5 pt-0">
   
       <!-- Form -->
-      <form [formGroup]="validatingForm" class="text-center" style="color: #0F0D3E;">
+      <form class="text-center" style="color: #0F0D3E;"  [formGroup]="signinForm" (ngSubmit)="loginUser()">
   
         <!-- Email -->
         
           <!-- <input [(ngModel)]="LoginData.email" name="email" mdbInput mdbValidation type="email" id="email" class="form-control" formControlName="email"> -->
           <div class="md-form pl-5">
-            <input style="width:80%; " [(ngModel)]="LoginData.email" name="email" mdbInput mdbValidation type="email" id="form8" class="form-control" formControlName="email">
+            <input style="width:80%;" name="email" mdbInput mdbValidation type="email" id="form8" class="form-control" formControlName="email">
             <label class="ml-5" for="form8">Email </label>
             <mdb-error *ngIf="input.email  && input.email.invalid && (input.email.dirty || input.email.touched)">
               <span *ngIf="input.email.errors!.required">Email is required</span>
@@ -47,7 +47,7 @@
           
         </div>
         <div class="md-form pl-5">
-          <input style="width:80%; " mdbValidation [(ngModel)]="LoginData.password" name="password" type="password" id="password" class="form-control" mdbInput formControlName="password">
+          <input style="width:80%; " mdbValidation name="password" type="password" id="password" class="form-control" mdbInput formControlName="password">
           <label class="ml-5" for="password">Password</label>
          
           <mdb-error *ngIf="input.password && input.password.invalid && (input.password.dirty || input.password.touched)">
@@ -71,12 +71,11 @@
         </div>
   
         <!-- Sign in button -->
-        <button mdbBtn class="custom-submit my-4 waves-effect z-depth-0" mdbWavesEffect
-          type="submit" (click)="LoginUser()" [disabled]="validatingForm.invalid">Login</button>
+        <button mdbBtn class="custom-submit my-4 waves-effect z-depth-0" mdbWavesEffect type="submit">Login</button>
   
         <!-- Register -->
         <p class="text-white" >Not a member?
-        <a class="text-white"  [routerLink]="[ '/oer/register']">Register</a>
+        <a class="text-white"  [routerLink]="[ '/register']">Register</a>
         </p>
   
        

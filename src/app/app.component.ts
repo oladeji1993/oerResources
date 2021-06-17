@@ -37,7 +37,7 @@ export class AppComponent {
       this.specialPage = this.specialPages.indexOf(this.currentUrl) !== -1;
     });
     if (isDevMode()) {
-      console.log(environment.apiUrl);
+      // console.log(environment.apiUrl);
     } else {
       console.log('💪 Production!');
     }

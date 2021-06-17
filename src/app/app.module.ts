@@ -2,18 +2,12 @@
 import { GuestGuard } from './Middleware/guest.guard';
 import { AuthGuard } from './Middleware/auth.guard';
 import { AuthService } from './shared/services/auth/auth.service';
-
 import {NgxsModule} from '@ngxs/store';
 import { NgxsStoragePluginModule} from '@ngxs/storage-plugin'
 import {NgxsReduxDevtoolsPluginModule} from '@ngxs/devtools-plugin';
 import {NgxsLoggerPluginModule} from '@ngxs/logger-plugin';
-
-
-
-
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,7 +25,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
-// import { HttpClientModule } from '@angular/common/http';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
@@ -39,11 +32,13 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { TokenInterceptorService } from './shared/services/auth/token-interceptor.service';
 import { AuthState } from './shared/state/auth.state';
 import { OerModule } from './layouts/oer/oer.module';
+import { DashboardComponent } from './oer/dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
    
   
   ],

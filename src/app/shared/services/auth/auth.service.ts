@@ -1,15 +1,13 @@
-import { Injectable, isDevMode } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, of, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpErrorResponse  } from '@angular/common/http';
+import { User } from  '../auth/user'
+import { Observable, throwError } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-let Url = ""
-if (isDevMode()) {
-  Url = environment.apiUrl;
-} else {
-  console.log('💪 Production!');
-}
+
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,60 +15,74 @@ if (isDevMode()) {
 
 
 export class AuthService {
-    // login(payload: any) {
-    //     throw new Error("Method not implemented.");
-    // }
-  private APIUrl =  Url
-  // private APIUrl =  "http://localhost/php-jwt/api/"
+  endpoint: string = "http://localhost:3000/api"
+  headers = new HttpHeaders().set('Content-Type', 'application/json');
+
+  currentUser = {};
  
-  
-  
-  
-
-
-  // httpOptions = {
-  //   headers: new HttpHeaders({
-  //     'Content-Type':  'application/json',
-      
-  //     'Access-Control-Allow-Origin': '*',
-  //     'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, PUT, OPTIONS',
-  //     'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With',
-  
-  //   })
-  // };
   constructor(
-    private http: HttpClient,
-    private _router: Router,
-    
+      private http: HttpClient,
+      public router: Router
     ) { }
 
-  UserLogin (User: any){
-    // return this.http.post<any>(this.APIUrl  + 'login.php', User)
-    return this.http.post<any>(this.APIUrl  + 'login', User)
-  }
-  getUser (){
-    // return this.http.get<any>(this.APIUrl + 'get-user.php?id=6')
-    return this.http.get<any>(this.APIUrl + 'get-user')
-  }
-   // Returns true when user is looged in and email is verified
-  get isLoggedIn(): boolean {
-    const user = localStorage.getItem('UserToken');
-    return (user !== null) ? true : false;
+    // sign-up
+    signUp (user: User): Observable<any>{
+      let api = `${this.endpoint}/register`;
+      return this.http.post(api, user)
+      .pipe(
+        catchError(this.handleError)
+      )
+    };
+
+    // SignIN
+    signIn(user: User){
+      return this.http.post<any>(`${this.endpoint}/login`, user)
+      .subscribe((res: any) => {
+        localStorage.setItem('access_token', res.token)
+        this.getUserProfile(res._id).subscribe((res) =>{
+          this.currentUser = res;
+          this.router.navigate(['dashboard' + res.msg._id])
+        }) 
+      })
+    }
+
+    getToken(){
+      return localStorage.getItem('access_token');
+    }
+
+    get isLoggedIn(): boolean {
+      let authToken = localStorage.getItem('access_token');
+      return (authToken !== null) ? true : false 
+    }
+
+    doLogOut(){
+      let removeToken = localStorage.removeItem('access_token');
+      if (removeToken == null){
+        this.router.navigate(['login'])
+      }
+    }
+
+ // User profile
+  getUserProfile(id): Observable<any> {
+    let api = `${this.endpoint}/user-profile/${id}`;
+    return this.http.get(api, { headers: this.headers }).pipe(
+      map((res) => {
+        return res || {}
+      }),
+      catchError(this.handleError)
+    )
   }
 
-  // Sign out 
-  // LogOut() {
 
-  //     localStorage.removeItem('UserToken');
-  //     this._router.navigate(['/transcript']);
-    
-  // }
-
-  LogOut(): Observable<null> {
-    return of(null);
-}
-
-  getToken(){
-    return localStorage.getItem('UserToken');
+    // Error 
+  handleError(error: HttpErrorResponse) {
+    let msg = '';
+    if (error.error instanceof ErrorEvent) {
+      msg = error.error.message;
+    } else {
+      msg = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    return throwError(msg);
   }
+
 }
